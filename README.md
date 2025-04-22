@@ -20,8 +20,12 @@ AlgOSRL extends this to work in the reinforcement learning space by:
 A wrapper for [Tianshou](https://github.com/thu-ml/tianshou) also provided but has limited testing due to its incompatibility with Dict based inputs with its replay buffer and the integration of its replay buffer. 
 
 ## Installation
+Install via pip:
+```sh
+pip install algosrl
+```
 
-Currently the install method is to invoke the following from the cloned directory:
+Install from the cloned directory:
 
 ```sh
 pip install -e .
