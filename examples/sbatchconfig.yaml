@@ -1,0 +1,29 @@
+sbatch: |
+    #!/bin/bash --login
+    #SBATCH --partition={partition}
+    #SBATCH --gres={gres}
+    #SBATCH --job-name={job_name}
+    #SBATCH --nodes=1
+    #SBATCH --mem={mem}
+    #SBATCH --ntasks-per-node=1
+    #SBATCH -o {output_file}.out
+    #SBATCH -e {output_file}.err
+    #SBATCH --account={account}
+    #SBATCH --cpus-per-task={cpus_per_task}
+    #SBATCH --qos={qos}
+    #SBATCH --time={time}
+    module load {module}
+    python {remote_script_path}
+
+defaults:
+  partition: "default_part"
+  gres: "default_gres"
+  job_name: "default_job"
+  output_file: "default_output"
+  account: "default_account"
+  cpus_per_task: 3
+  qos: "default_qos"
+  time: "default_time"
+  remote_script_path: "/path/to/my/runner/myexprunner.py"
+  mem: "default_mem"
+  module: "default_module"
