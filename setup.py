@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="algosrl",  
-    version="0.1.1",  
+    version="0.1.2",  
     author="LlewynS",  
     author_email="algos251@gmail.com",
     description="Algorithm OS RL: An RL module for AlgOS",
@@ -17,7 +17,7 @@ setup(
     ],
     python_requires=">=3.10", 
     install_requires=[
-        "algos_core==0.1.0",
+        "algos==0.1.0",
         "gym-dcmotor==0.2",
         "gymnasium==0.29.1",
         "numpy==1.23.5",
